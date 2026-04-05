@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ali Sheir Temp Mail</title>
+</head>
+<body style="background:#0f172a;color:white;text-align:center">
+
+<h1>Ali Sheir Temp Mail</h1>
+
+<button onclick="gen()">Generate Email</button>
+<br><br>
+
+<input id="email" readonly style="padding:10px;width:300px">
+
+<div id="inbox"></div>
+
+<script>
+async function gen() {
+  let res = await fetch("/api/generate");
+  let data = await res.json();
+
+  document.getElementById("email").value = data.email;
+
+  loadInbox();
+}
+
+async function loadInbox() {
+  let res = await fetch("/api/inbox");
+  let data = await res.json();
+
+  document.getElementById("inbox").innerHTML = data.data;
+}
+
+setInterval(loadInbox, 5000);
+</script>
+
+</body>
+</html>
