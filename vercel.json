@@ -1,7 +1,0 @@
-{
-  "routes": [
-    { "src": "/api/generate", "dest": "/api/generate.js" },
-    { "src": "/api/inbox", "dest": "/api/inbox.js" },
-    { "src": "/api/read", "dest": "/api/read.js" }
-  ]
-}
