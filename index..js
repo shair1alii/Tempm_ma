@@ -5,7 +5,7 @@
 </head>
 <body style="background:#0f172a;color:white;text-align:center">
 
-<h1>Ali Sheir Tem Mail</h1>
+<h1>Ali Sheir Tep Mail</h1>
 
 <button onclick="gen()">Generate Email</button>
 <br><br>
